@@ -1,0 +1,820 @@
+<mat-accordion>
+
+  <!-- Situation  -->
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{constants.situation.title}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{constants.situation.description}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <!-- Area of Interest -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.areaOfInterest.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.areaOfInterest.tooltipShown" mat-icon matTooltip={{constants.areaOfInterest.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.areaOfInterest.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-form-field appearance="fill">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </mat-expansion-panel>
+
+    <!-- Area of Operations -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.areaOfOperations.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.areaOfOperations.tooltipShown" mat-icon matTooltip={{constants.areaOfOperations.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.areaOfOperations.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <strong>{{constants.northLabel}}: </strong><mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="ao_north">
+      </mat-form-field>
+      <br>
+      <strong>{{constants.southLabel}}: </strong><mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="ao_south">
+      </mat-form-field>
+      <br>
+      <strong>{{constants.eastLabel}}: </strong><mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="ao_east">
+      </mat-form-field>
+      <br>
+      <strong>{{constants.westLabel}}: </strong><mat-form-field appearance="fill">
+        <!-- <mat-label>Input</mat-label> -->
+        <input matInput [(ngModel)]="ao_west">
+      </mat-form-field>
+    </mat-expansion-panel>
+
+    <!-- Terrain -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.terrain.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.terrain.tooltipShown" mat-icon matTooltip={{constants.terrain.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.terrain.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+        <!-- Obstacles -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.obstacles.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.obstacles.tooltipShown" mat-icon matTooltip={{constants.obstacles.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.obstacles.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          
+            <!-- Manmade -->
+            <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{constants.manmadeObstacles.title}}
+                  &nbsp;
+                  <mat-icon *ngIf="constants.manmadeObstacles.tooltipShown" mat-icon matTooltip={{constants.manmadeObstacles.information}}>
+                    info
+                  </mat-icon>
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{constants.manmadeObstacles.description}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+            </mat-expansion-panel>
+            
+            <!-- Natural -->
+            <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{constants.naturalObstacles.title}}
+                  &nbsp;
+                  <mat-icon *ngIf="constants.naturalObstacles.tooltipShown" mat-icon matTooltip={{constants.naturalObstacles.information}}>
+                    info
+                  </mat-icon>
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{constants.naturalObstacles.description}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+            </mat-expansion-panel>
+        </mat-expansion-panel>
+          
+          <!-- Avenues of Approach -->
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.avenuesOfApproach.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.avenuesOfApproach.tooltipShown" mat-icon matTooltip={{constants.avenuesOfApproach.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.avenuesOfApproach.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+
+      <!-- Key Terrain -->
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.keyTerrain.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.keyTerrain.tooltipShown" mat-icon matTooltip={{constants.keyTerrain.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.keyTerrain.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+
+      <!-- Observation and Fields of Fire -->
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.observationFieldsOfFire.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.observationFieldsOfFire.tooltipShown" mat-icon matTooltip={{constants.observationFieldsOfFire.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.observationFieldsOfFire.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+      
+      <!-- Cover and Concealment -->
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.coverConcealment.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.coverConcealment.tooltipShown" mat-icon matTooltip={{constants.coverConcealment.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.coverConcealment.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+    </mat-expansion-panel>
+
+    <!-- Weather -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.weather.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.weather.tooltipShown" mat-icon matTooltip={{constants.weather.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.weather.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <!-- Light Data -->
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.lightData.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.lightData.tooltipShown" mat-icon matTooltip={{constants.lightData.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.lightData.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.lightEffects.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.lightEffects.tooltipShown" mat-icon matTooltip={{constants.lightEffects.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.lightEffects.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+      </mat-expansion-panel>
+
+      <!-- Weather Data -->
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.weatherData.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.weatherData.tooltipShown" mat-icon matTooltip={{constants.weatherData.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.weatherData.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <strong>{{constants.dailyHighLabel}}: </strong><mat-form-field appearance="fill">
+          <mat-label>Daily High Temperature</mat-label>
+          <input matInput [(ngModel)]="dailyHigh" type="number">
+        </mat-form-field>
+        <br>
+        <strong>{{constants.dailyLowLabel}}: </strong><mat-form-field appearance="fill">
+          <mat-label>Daily Low Temperature</mat-label>
+          <input matInput [(ngModel)]="dailyLow" type="number">
+        </mat-form-field>
+        <br>
+        <strong>{{constants.dewFogLabel}}: </strong><mat-form-field appearance="fill">
+          <input matInput [(ngModel)]="dewFogInfo">
+        </mat-form-field>
+        <br>
+        <strong>{{constants.windLabel}}: </strong><mat-form-field appearance="fill">
+          <mat-label>Wind Speed</mat-label>
+          <input matInput [(ngModel)]="windSpeed" type="number">
+        </mat-form-field> mph from the <mat-form-field appearance="fill">
+          <mat-label>Direction</mat-label>
+          <input matInput [(ngModel)]="windDirection">
+        </mat-form-field>
+
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.weatherEffects.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.weatherEffects.tooltipShown" mat-icon matTooltip={{constants.weatherEffects.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.lightEffects.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+      </mat-expansion-panel>
+
+    </mat-expansion-panel>
+
+    <!-- Enemy Forces -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.enemyForces.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.enemyForces.tooltipShown" mat-icon matTooltip={{constants.enemyForces.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.enemyForces.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      
+      <!-- Enemy Disposition Two Levels Higher -->
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.enemyDispositionTwoHigher.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.enemyDispositionTwoHigher.tooltipShown" mat-icon matTooltip={{constants.enemyDispositionTwoHigher.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.enemyDispositionTwoHigher.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.enemyDispositionOneHigher.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.enemyDispositionOneHigher.tooltipShown" mat-icon matTooltip={{constants.enemyDispositionOneHigher.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.enemyDispositionOneHigher.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.enemyComposition.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.enemyComposition.tooltipShown" mat-icon matTooltip={{constants.enemyComposition.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.enemyComposition.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.enemyStrength.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.enemyStrength.tooltipShown" mat-icon matTooltip={{constants.enemyStrength.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.enemyStrength.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.enemyCapabilities.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.enemyCapabilities.tooltipShown" mat-icon matTooltip={{constants.enemyCapabilities.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.enemyCapabilities.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <!-- Intelligence -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.enemyIntelligence.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.enemyIntelligence.tooltipShown" mat-icon matTooltip={{constants.enemyIntelligence.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.enemyIntelligence.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+
+        <!-- Movement / Maneuever -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.enemyMovementManeuever.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.enemyMovementManeuever.tooltipShown" mat-icon matTooltip={{constants.enemyMovementManeuever.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.enemyMovementManeuever.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+
+        <!-- Fires -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.enemyFires.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.enemyFires.tooltipShown" mat-icon matTooltip={{constants.enemyFires.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.enemyFires.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+
+        <!-- Protection -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.enemyProtection.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.enemyProtection.tooltipShown" mat-icon matTooltip={{constants.enemyProtection.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.enemyProtection.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+
+        <!-- Sustainment -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.enemySustainment.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.enemySustainment.tooltipShown" mat-icon matTooltip={{constants.enemySustainment.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.enemySustainment.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+
+        <!-- Mission Command -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.enemyMissionCommand.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.enemyMissionCommand.tooltipShown" mat-icon matTooltip={{constants.enemyMissionCommand.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.enemyMissionCommand.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.enemyMLCOA.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.enemyMLCOA.tooltipShown" mat-icon matTooltip={{constants.enemyMLCOA.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.enemyMLCOA.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <!-- Enemy COA Statement -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.enemyMLCOAStatement.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.enemyMLCOAStatement.tooltipShown" mat-icon matTooltip={{constants.enemyMLCOAStatement.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.enemyMLCOAStatement.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+
+        <!-- Enemy Scheme of Maneuever -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.enemyMLCOASOM.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.enemyMLCOASOM.tooltipShown" mat-icon matTooltip={{constants.enemyMLCOASOM.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.enemyMLCOASOM.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+      </mat-expansion-panel>
+
+    </mat-expansion-panel>
+
+    <!-- Friendly Forces -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.friendlyForces.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.friendlyForces.tooltipShown" mat-icon matTooltip={{constants.friendlyForces.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.friendlyForces.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <!-- Friendly 2 Up -->
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.friendlyTwoHigher.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.friendlyTwoHigher.tooltipShown" mat-icon matTooltip={{constants.friendlyTwoHigher.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.friendlyTwoHigher.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <!-- Mission -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.friendlyTwoHigherMission.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.friendlyTwoHigherMission.tooltipShown" mat-icon matTooltip={{constants.friendlyTwoHigherMission.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.friendlyTwoHigherMission.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+
+        <!-- Commander's Intent -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.friendlyTwoHigherIntent.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.friendlyTwoHigherIntent.tooltipShown" mat-icon matTooltip={{constants.friendlyTwoHigherIntent.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.friendlyTwoHigherIntent.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <!-- Expanded Purpose -->
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{constants.friendlyTwoHigherPurpose.title}}
+                &nbsp;
+                <mat-icon *ngIf="constants.friendlyTwoHigherPurpose.tooltipShown" mat-icon matTooltip={{constants.friendlyTwoHigherPurpose.information}}>
+                  info
+                </mat-icon>
+              </mat-panel-title>
+              <mat-panel-description>
+                {{constants.friendlyTwoHigherPurpose.description}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+
+          <!-- Key Tasks -->
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{constants.friendlyTwoHigherKeyTasks.title}}
+                &nbsp;
+                <mat-icon *ngIf="constants.friendlyTwoHigherKeyTasks.tooltipShown" mat-icon matTooltip={{constants.friendlyTwoHigherKeyTasks.information}}>
+                  info
+                </mat-icon>
+              </mat-panel-title>
+              <mat-panel-description>
+                {{constants.friendlyTwoHigherKeyTasks.description}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+
+          <!-- End State -->
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{constants.friendlyTwoHigherEndstate.title}}
+                &nbsp;
+                <mat-icon *ngIf="constants.friendlyTwoHigherEndstate.tooltipShown" mat-icon matTooltip={{constants.friendlyTwoHigherEndstate.information}}>
+                  info
+                </mat-icon>
+              </mat-panel-title>
+              <mat-panel-description>
+                {{constants.friendlyTwoHigherEndstate.description}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+        </mat-expansion-panel>
+      </mat-expansion-panel>
+
+      <!-- Friendly 1 Up -->
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{constants.friendlyOneHigher.title}}
+            &nbsp;
+            <mat-icon *ngIf="constants.friendlyOneHigher.tooltipShown" mat-icon matTooltip={{constants.friendlyOneHigher.information}}>
+              info
+            </mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{constants.friendlyOneHigher.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <!-- Mission -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.friendlyOneHigherMission.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.friendlyOneHigherMission.tooltipShown" mat-icon matTooltip={{constants.friendlyOneHigherMission.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.friendlyOneHigherMission.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+
+        <!-- Commander's Intent -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{constants.friendlyOneHigherIntent.title}}
+              &nbsp;
+              <mat-icon *ngIf="constants.friendlyOneHigherIntent.tooltipShown" mat-icon matTooltip={{constants.friendlyOneHigherIntent.information}}>
+                info
+              </mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{constants.friendlyOneHigherIntent.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <!-- Expanded Purpose -->
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{constants.friendlyOneHigherPurpose.title}}
+                &nbsp;
+                <mat-icon *ngIf="constants.friendlyOneHigherPurpose.tooltipShown" mat-icon matTooltip={{constants.friendlyOneHigherPurpose.information}}>
+                  info
+                </mat-icon>
+              </mat-panel-title>
+              <mat-panel-description>
+                {{constants.friendlyOneHigherPurpose.description}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+
+          <!-- Key Tasks -->
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{constants.friendlyOneHigherKeyTasks.title}}
+                &nbsp;
+                <mat-icon *ngIf="constants.friendlyOneHigherKeyTasks.tooltipShown" mat-icon matTooltip={{constants.friendlyOneHigherKeyTasks.information}}>
+                  info
+                </mat-icon>
+              </mat-panel-title>
+              <mat-panel-description>
+                {{constants.friendlyOneHigherKeyTasks.description}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+
+          <!-- End State -->
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{constants.friendlyOneHigherEndstate.title}}
+                &nbsp;
+                <mat-icon *ngIf="constants.friendlyOneHigherEndstate.tooltipShown" mat-icon matTooltip={{constants.friendlyOneHigherEndstate.information}}>
+                  info
+                </mat-icon>
+              </mat-panel-title>
+              <mat-panel-description>
+                {{constants.friendlyOneHigherEndstate.description}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+        </mat-expansion-panel>
+      </mat-expansion-panel>
+
+    </mat-expansion-panel>
+  
+  </mat-expansion-panel>
+
+
+  <!-- Mission -->
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{constants.mission.title}}
+        &nbsp;
+        <mat-icon *ngIf="constants.mission.tooltipShown" mat-icon matTooltip={{constants.mission.information}}>
+          info
+        </mat-icon>
+      </mat-panel-title>
+      <mat-panel-description>
+        {{constants.mission.description}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+
+  <!-- Execution -->
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{constants.execution.title}}
+        &nbsp;
+        <mat-icon *ngIf="constants.execution.tooltipShown" mat-icon matTooltip={{constants.execution.information}}>
+          info
+        </mat-icon>
+      </mat-panel-title>
+      <mat-panel-description>
+        {{constants.execution.description}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+
+  <!-- Sustainment -->
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{constants.sustainment.title}}
+        &nbsp;
+        <mat-icon *ngIf="constants.sustainment.tooltipShown" mat-icon matTooltip={{constants.sustainment.information}}>
+          info
+        </mat-icon>
+      </mat-panel-title>
+      <mat-panel-description>
+        {{constants.sustainment.description}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+
+  <!-- Command and Signal -->
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{constants.commandAndSignal.title}}
+        &nbsp;
+        <mat-icon *ngIf="constants.commandAndSignal.tooltipShown" mat-icon matTooltip={{constants.commandAndSignal.information}}>
+          info
+        </mat-icon>
+      </mat-panel-title>
+      <mat-panel-description>
+        {{constants.commandAndSignal.description}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+
+  <!-- <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Self aware panel
+      </mat-panel-title>
+      <mat-panel-description>
+        Currently I am {{panelOpenState ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>I'm visible because I am open</p>
+  </mat-expansion-panel> -->
+</mat-accordion>
