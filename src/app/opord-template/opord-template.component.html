@@ -126,7 +126,7 @@
             </mat-expansion-panel>
         </mat-expansion-panel>
           
-          <!-- Avenues of Approach -->
+      <!-- Avenues of Approach -->
       <mat-expansion-panel hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
@@ -771,6 +771,119 @@
         {{constants.execution.description}}
       </mat-panel-description>
     </mat-expansion-panel-header>
+
+    <!-- Commander's Intent -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.commandersIntent.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.commandersIntent.tooltipShown" mat-icon matTooltip={{constants.commandersIntent.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.commandersIntent.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <!-- Concept of Operation -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.conceptOfOperation.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.conceptOfOperation.tooltipShown" mat-icon matTooltip={{constants.conceptOfOperation.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.conceptOfOperation.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <!-- Scheme of Maneuver -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.schemeOfManeuver.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.schemeOfManeuver.tooltipShown" mat-icon matTooltip={{constants.schemeOfManeuver.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.schemeOfManeuver.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <!-- Tasks to Subordinate Units -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.tasksToSubordinateUnits.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.tasksToSubordinateUnits.tooltipShown" mat-icon matTooltip={{constants.tasksToSubordinateUnits.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.tasksToSubordinateUnits.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <!-- Coordinating Instructions -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.coordinatingInstructions.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.coordinatingInstructions.tooltipShown" mat-icon matTooltip={{constants.coordinatingInstructions.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.coordinatingInstructions.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <!-- Timeline -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.timeline.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.timeline.tooltipShown" mat-icon matTooltip={{constants.timeline.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.timeline.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <!-- Priority of Rehearsals -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.priorityOfRehearsals.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.priorityOfRehearsals.tooltipShown" mat-icon matTooltip={{constants.priorityOfRehearsals.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.priorityOfRehearsals.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
   </mat-expansion-panel>
 
   <!-- Sustainment -->
@@ -787,6 +900,38 @@
         {{constants.sustainment.description}}
       </mat-panel-description>
     </mat-expansion-panel-header>
+
+    <!-- Concept of Support -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.conceptOfSupport.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.conceptOfSupport.tooltipShown" mat-icon matTooltip={{constants.conceptOfSupport.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.conceptOfSupport.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <!-- Material and Services -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.materialAndServices.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.materialAndServices.tooltipShown" mat-icon matTooltip={{constants.materialAndServices.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.materialAndServices.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
   </mat-expansion-panel>
 
   <!-- Command and Signal -->
@@ -803,6 +948,38 @@
         {{constants.commandAndSignal.description}}
       </mat-panel-description>
     </mat-expansion-panel-header>
+
+    <!-- Command -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.command.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.command.tooltipShown" mat-icon matTooltip={{constants.command.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.command.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <!-- Signal -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{constants.signal.title}}
+          &nbsp;
+          <mat-icon *ngIf="constants.signal.tooltipShown" mat-icon matTooltip={{constants.signal.information}}>
+            info
+          </mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{constants.signal.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
   </mat-expansion-panel>
 
   <!-- <mat-expansion-panel (opened)="panelOpenState = true"

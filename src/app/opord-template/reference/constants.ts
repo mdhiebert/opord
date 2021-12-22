@@ -110,12 +110,12 @@ class OPORDConstants {
         description: "Describe the aspects of weather that impact operations.",
         tooltipShown: false,
         information: "",
-        source: "",
+        source: "git",
     }
 
     lightData = {
         title: "Light Data",
-        description: "",
+        description: "TODO: Autoscrape based on location and datetime.",
         tooltipShown: false,
         information: "",
         source: "",
@@ -463,6 +463,22 @@ class OPORDConstants {
         source: "",
     }
 
+    timeline = {
+        title: "Timeline",
+        description: "",
+        tooltipShown: false,
+        information: "",
+        source: "",
+    }
+
+    priorityOfRehearsals = {
+        title: "Priority of Rehearsals",
+        description: "",
+        tooltipShown: false,
+        information: "",
+        source: "",
+    }
+
     sustainment = {
         title: "Sustainment",
         description: "",
@@ -471,8 +487,40 @@ class OPORDConstants {
         source: "",
     }
 
+    conceptOfSupport = {
+        title: "Concept of Support",
+        description: "",
+        tooltipShown: false,
+        information: "",
+        source: "",
+    }
+
+    materialAndServices = {
+        title: "Material and Services",
+        description: "",
+        tooltipShown: false,
+        information: "",
+        source: "",
+    }
+
     commandAndSignal = {
         title: "Command And Signal",
+        description: "",
+        tooltipShown: false,
+        information: "",
+        source: "",
+    }
+
+    command = {
+        title: "Command",
+        description: "",
+        tooltipShown: false,
+        information: "",
+        source: "",
+    }
+
+    signal = {
+        title: "Signal",
         description: "",
         tooltipShown: false,
         information: "",

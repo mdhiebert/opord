@@ -1,0 +1,197 @@
+{
+    "situation": {
+        "areaOfInterest": "",
+        "areaOfOperations": "",
+        "terrain": {
+            "obstacles": {
+                "manmade": "",
+                "natural": ""
+            },
+            "avenuesOfApproach": "",
+            "keyTerrain": "",
+            "observationFieldsOfFire": "",
+            "coverAndConcealment": ""
+        },
+        "weather": {
+            "lightData": {
+                "data": [
+                    {
+                        "date": "",
+                        "bmnt": "",
+                        "sr": "",
+                        "ss": "",
+                        "eent": "",
+                        "illum": ""
+                    }
+                ],
+                "effects": ""
+            },
+            "weatherData": {
+                "dailyHigh": 0,
+                "dailyLow": 0,
+                "dewAndFogInformation": "",
+                "windSpeed": 0,
+                "windDirection": "",
+                "effects": ""
+            }
+        },
+        "enemyForces": {
+            "dispositionTwoLevelsUp": "",
+            "dispositionOneLevelUp": "",
+            "composition": "",
+            "strength": "",
+            "capabilities": {
+                "intelligence": "",
+                "movementManeuver": "",
+                "fires": "",
+                "protection": "",
+                "sustainment": "",
+                "missionCommand": ""
+            },
+            "enemyMLCOA": {
+                "COAStatement": "",
+                "SOM": ""
+            }
+        },
+        "friendlyForces": {
+            "friendlyTwoLevelsUp": {
+                "mission": "",
+                "commandersIntent": {
+                    "expandedPurpose": "",
+                    "keyTasks": [
+                        ""
+                    ],
+                    "endState": {
+                        "friendly": "",
+                        "military": "",
+                        "civilTerrain": ""
+                    }
+                }
+            },
+            "friendlyOneLevelUp": {
+                "mission": "",
+                "commandersIntent": {
+                    "expandedPurpose": "",
+                    "keyTasks": [
+                        ""
+                    ],
+                    "endState": {
+                        "friendly": "",
+                        "military": "",
+                        "civilTerrain": ""
+                    }
+                }
+            }
+        }
+    },
+    "mission": "",
+    "execution": {
+        "commandersIntent": {
+            "expandedPurpose": "",
+            "keyTasks": [
+                ""
+            ],
+            "endState": {
+                "friendly": "",
+                "military": "",
+                "civilTerrain": ""
+            }
+        },
+        "conceptOfOperation": {
+            "COAStatement": "",
+            "phases": [
+                {
+                    "name": "",
+                    "beginsWith": "",
+                    "endsWith": "",
+                    "criticalTasks": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        "schemeOfManeuver": {
+            "phases": [
+                {
+                    "name": "",
+                    "beginsWith": "",
+                    "endsWith": "",
+                    "details": ""
+                }
+            ]
+        },
+        "tasksToSubordinateUnits": [
+            {
+                "unitName": "",
+                "tasks": [
+                    ""
+                ]
+            }
+        ],
+        "coordinatingInstructions": {
+            "MOPPLevel": 0,
+            "ADW": "",
+            "weaponsControlStatus": "",
+            "ccir": {
+                "pir": [
+                    ""
+                ],
+                "ffir": [
+                    ""
+                ],
+                "eefi": [
+                    ""
+                ]
+            }
+        },
+        "timeline": [
+            {
+                "datetime": "",
+                "description": ""
+            }
+        ],
+        "priorityOfRehearsals": [
+            {
+                "unitName": "",
+                "prioritySequence": ""
+            }
+        ]
+    },
+    "sustainment": {
+        "conceptOfSupport": "",
+        "materialAndServices": {
+            "supply": [
+                {
+                    "class": "",
+                    "items": ""
+                }
+            ],
+            "transportation": "",
+            "medicalTreatmentHospitalization": "",
+            "personnel": ""
+        }
+    },
+    "commandAndSignal": {
+        "command": {
+            "locationOfKeyLeaders": [
+                {
+                    "keyLeaderName": "",
+                    "byPhase": [
+                        {
+                            "phase": 0,
+                            "location": ""
+                        }
+                    ]
+                }
+            ],
+            "successionOfCommand": ""
+        },
+        "signal": {
+            "frequency": 0,
+            "challenge": "",
+            "password": "",
+            "numberCombination": 0,
+            "runningPassword": ""
+        }
+    }
+}
