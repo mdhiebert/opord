@@ -15,7 +15,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ```
-ng build --prod --baseHref=” https://mdhiebert.github.io/opord/”
+ng build --prod --baseHref="https://mdhiebert.github.io/opord/”
 git add .
 git commit -m "generated deployables"
 git push -u origin master
